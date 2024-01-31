@@ -42,6 +42,10 @@ module Bp3
                   slug
                 end
 
+                def controllerize
+                  self.class.model_name.name.underscore.tr('/', '_').controllerize
+                end
+
                 private
 
                 def version_filter_mask
