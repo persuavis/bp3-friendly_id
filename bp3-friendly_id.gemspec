@@ -31,7 +31,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'bp3-string', ['>= 0.1', '< 8']
+  spec.add_dependency 'bp3-core', ['>= 0.1', '< 1']
+  spec.add_dependency 'bp3-string', ['>= 0.1', '< 1']
   spec.add_dependency 'friendly_id', '~> 5.5'
 
   spec.add_development_dependency 'byebug'
