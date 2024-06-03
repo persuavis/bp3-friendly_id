@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     bp3-friendly_id (0.1.0)
+      bp3-action_dispatch (>= 0.1, < 1)
       bp3-core (>= 0.1, < 1)
       bp3-string (>= 0.1, < 1)
       friendly_id (~> 5.5)
@@ -44,6 +45,10 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (3.1.8)
+    bp3-action_dispatch (0.1.1)
+      actionpack (>= 7.1.2, < 8)
+      activesupport (>= 7.1.2, < 8)
+      i18n (>= 1.8.11, < 2)
     bp3-core (0.1.2)
       actionview (>= 7.1.2, < 8)
       activesupport (>= 7.1.2, < 8)
