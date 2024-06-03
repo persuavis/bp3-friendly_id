@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['Wim den Braven']
   spec.email = ['wimdenbraven@persuavis.com']
 
-  spec.summary = 'bp3-friendly_id.'
+  spec.summary = 'bp3-friendly_id adapts friendly_id for BP3 (persuavis/black_phoebe_3).'
   # spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = 'https://www.black-phoebe.com'
   spec.license = 'MIT'
@@ -31,8 +31,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'bp3-string', ['>= 0.1', '< 8']
   spec.add_dependency 'friendly_id', '~> 5.5'
-  # spec.add_dependency 'bp3-string', '~> 0.1' # TODO: fix (remove from Gemfile)
 
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'rake', '~> 13.0'

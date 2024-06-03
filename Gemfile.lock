@@ -1,16 +1,8 @@
-GIT
-  remote: https://github.com/persuavis/bp3-string
-  revision: c169e9e57dc7048617406967e1193e02b15c6c25
-  specs:
-    bp3-string (0.1.0)
-      activerecord (~> 7.1)
-      activesupport (>= 7.1.2, < 8)
-      railties (~> 7.1)
-
 PATH
   remote: .
   specs:
     bp3-friendly_id (0.1.0)
+      bp3-string (>= 0.1, < 8)
       friendly_id (~> 5.5)
 
 GEM
@@ -51,6 +43,10 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (3.1.6)
+    bp3-string (0.1.1)
+      activerecord (~> 7.1)
+      activesupport (>= 7.1.2, < 8)
+      railties (~> 7.1)
     builder (3.2.4)
     byebug (11.1.3)
     concurrent-ruby (1.2.3)
@@ -65,8 +61,8 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
-    irb (1.11.1)
-      rdoc
+    irb (1.13.1)
+      rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.7.1)
     language_server-protocol (3.17.0.3)
@@ -75,7 +71,7 @@ GEM
       nokogiri (>= 1.12.0)
     minitest (5.21.2)
     mutex_m (0.2.0)
-    nokogiri (1.16.0-x86_64-darwin)
+    nokogiri (1.16.5-x86_64-darwin)
       racc (~> 1.4)
     parallel (1.24.0)
     parser (3.3.0.4)
@@ -84,7 +80,7 @@ GEM
     psych (5.1.2)
       stringio
     racc (1.7.3)
-    rack (3.0.8)
+    rack (3.0.11)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -109,10 +105,10 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.1.0)
-    rdoc (6.6.2)
+    rdoc (6.7.0)
       psych (>= 4.0.0)
     regexp_parser (2.9.0)
-    reline (0.4.2)
+    reline (0.5.8)
       io-console (~> 0.5)
     rexml (3.2.6)
     rspec (3.12.0)
@@ -154,20 +150,19 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     stringio (3.1.0)
-    thor (1.3.0)
+    thor (1.3.1)
     timeout (0.4.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
     webrick (1.8.1)
-    zeitwerk (2.6.12)
+    zeitwerk (2.6.15)
 
 PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
   bp3-friendly_id!
-  bp3-string!
   byebug
   rake (~> 13.0)
   rspec (~> 3.0)
@@ -176,4 +171,4 @@ DEPENDENCIES
   rubocop-rspec (~> 2.25)
 
 BUNDLED WITH
-   2.4.22
+   2.5.11
