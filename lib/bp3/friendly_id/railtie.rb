@@ -19,8 +19,23 @@ module Bp3
                 use_sqnr_for_ordering
                 has_paper_trail
 
-                # TODO: configure GRS and method. use mattr accessors ?
-                scope :current_site, -> { where(sites_site_id: GRS.current_site_id) }
+                scope :current_site, -> { where(sites_site_id: global_request_state_class.current_site_id) }
+
+                def self.global_request_state_class
+                  Bp3::Core::Rqid.global_request_state_class
+                end
+
+                def global_request_state_class
+                  Bp3::Core::Rqid.global_request_state_class
+                end
+
+                def self.site_class
+                  Bp3::ActionDispatch.site_class
+                end
+
+                def site_class
+                  Bp3::ActionDispatch.site_class
+                end
 
                 def self.table_name_basis
                   table_name.gsub(/\Apublic\./, '').singularize
@@ -61,7 +76,7 @@ module Bp3
                 def set_sites_site_id
                   return if sluggable_type.blank?
 
-                  self.sites_site_id = if sluggable.is_a?(Sites::Site)
+                  self.sites_site_id = if sluggable.is_a?(site_class)
                                          sluggable.id
                                        elsif sluggable.respond_to?(:sites_site_id)
                                          sluggable.sites_site_id
