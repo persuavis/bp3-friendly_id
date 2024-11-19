@@ -1,8 +1,6 @@
 require:
   - rubocop-rake
   - rubocop-rspec
-  - rubocop-capybara
-  - rubocop-factory_bot
 
 AllCops:
   TargetRubyVersion: 3.2.2
