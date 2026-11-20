@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   # spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = 'https://www.black-phoebe.com'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.2.0'
+  spec.required_ruby_version = '>= 4.0.10'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
